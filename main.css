@@ -1,0 +1,149 @@
+/* reset the stuff browsers add by default */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* base — black text on white, readable font */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── header ── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #111;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+}
+
+/* underline on hover feels nicer than color changes here */
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ── hero ── */
+.hero {
+  padding: 6rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero .label {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero .sub {
+  font-size: 1.15rem;
+  opacity: 0.65;
+  margin-bottom: 2rem;
+}
+
+/* reusable button — just a bordered box, no color tricks */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border: 2px solid #111;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* ── generic section ── */
+.section {
+  padding: 4rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid #e5e5e5;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+}
+.section p {
+  opacity: 0.7;
+  max-width: 55ch;
+}
+
+/* ── project cards ── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1.25rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* subtle hover — lift the border a bit */
+.card:hover {
+  border-color: #111;
+}
+
+/* ── footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.4;
+  border-top: 1px solid #e5e5e5;
+}
